@@ -1,2 +1,5 @@
-label1:
-  - example1/*
+front-end:
+  - src/**/*.js
+
+native-changes:
+  - android/**/*
