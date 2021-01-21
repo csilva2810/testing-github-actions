@@ -5,15 +5,15 @@
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler
 
-name: Labeler
+name: PR triage with Labeler
 on: [pull_request]
 
 jobs:
-  label:
-
+  triage:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/labeler@v2
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: actions/labeler@v2
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      - run: "echo testing labeler"
